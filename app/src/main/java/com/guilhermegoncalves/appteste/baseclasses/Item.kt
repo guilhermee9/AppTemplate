@@ -1,4 +1,4 @@
-package com.jailton.apptemplateproject.baseclasses
+package com.guilhermegoncalves.appteste.baseclasses
 
 data class Item(
     val name: String = "",

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.jailton.apptemplateproject"
+    namespace = "com.guilhermegoncalves.appteste"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.jailton.apptemplateproject"
+        applicationId = "com.guilhermegoncalves.appteste"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -1,26 +1,22 @@
-package com.jailton.apptemplateproject.ui.home
+package com.guilhermegoncalves.appteste.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.jailton.apptemplateproject.MainActivity
-import com.jailton.apptemplateproject.R
-import com.jailton.apptemplateproject.baseclasses.Item
-import com.jailton.apptemplateproject.baseclasses.StoreAdapter
-import com.jailton.apptemplateproject.databinding.FragmentHomeBinding
+import com.guilhermegoncalves.appteste.R
+import com.guilhermegoncalves.appteste.baseclasses.Item
+import com.guilhermegoncalves.appteste.baseclasses.StoreAdapter
+import com.guilhermegoncalves.appteste.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
