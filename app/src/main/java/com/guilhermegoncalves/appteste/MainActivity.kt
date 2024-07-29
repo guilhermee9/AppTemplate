@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.guilhermegoncalves.appteste.baseclasses.Usuario
 import com.guilhermegoncalves.appteste.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseUser
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
     companion object {
-        var currentUser: Usuario? = null
+        var usuarioLogado: FirebaseUser? = null
             public set
     }
 

@@ -20,6 +20,6 @@
     <fragment
         android:id="@+id/navigation_item"
         android:name="com.guilhermegoncalves.appteste.ui.store.StoreFragment"
-        android:label="@string/title_item"
+        android:label="@string/title_perfil_usuario"
         tools:layout="@layout/fragment_store" />
 </navigation>

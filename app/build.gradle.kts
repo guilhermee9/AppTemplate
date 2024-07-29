@@ -2,8 +2,14 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
-}
 
+    }
+
+    buildscript {
+    dependencies {
+    classpath (libs.google.services)
+    }
+}
 android {
     namespace = "com.guilhermegoncalves.appteste"
     compileSdk = 34
@@ -60,6 +66,10 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.androidx.annotation)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.play.services.auth)
+    implementation(libs.firebase.messaging.ktx)
+    implementation (libs.firebase.messaging)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

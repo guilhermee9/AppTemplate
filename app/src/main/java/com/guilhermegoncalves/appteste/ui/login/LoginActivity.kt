@@ -2,19 +2,30 @@ package com.guilhermegoncalves.appteste.ui.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.android.gms.auth.api.Auth
+import com.google.android.gms.auth.api.signin.GoogleSignInResult
 import com.guilhermegoncalves.appteste.MainActivity
+import com.guilhermegoncalves.MainActivity.Companion.usuarioLogado
 import com.guilhermegoncalves.appteste.R
 import com.guilhermegoncalves.appteste.baseclasses.Usuario
 import com.guilhermegoncalves.appteste.ui.usuario.CadastroUsuarioActivity
@@ -27,6 +38,15 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var registerLink: TextView
     private lateinit var navController: NavController
     private lateinit var database: DatabaseReference
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
+
+    companion object {
+        private const val RC_SIGN_IN = 9001
+        private const val TAG = "GoogleActivity"
+    }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
